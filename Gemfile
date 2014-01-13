@@ -1,25 +1,22 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
 gem 'rails-api'
-
-# Use postgresql as the database for Active Record
 gem 'pg'
 
+gem 'unicorn'
+gem 'unicorn-rails'
 
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'ember-rails'
+gem 'ember-source', '1.3.0'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
+group :development, :test do
+  gem 'factory_girl_rails'
+end
 
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', :group => :development
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+  gem 'guard-rails'
+  gem 'guard-minitest'
+  gem 'guard-livereload', require: false
+end

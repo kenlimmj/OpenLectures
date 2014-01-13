@@ -1,0 +1,12 @@
+# ~/.tmuxinator/openlectures.yml
+
+name: openlectures
+root: ~/openlectures
+
+windows:
+  - vim:
+      layout: 2a88,178x46,0,0[178x37,0,0,14,178x8,0,38,16]
+      panes:
+        - vim .
+        - 
+  - guard: guard
